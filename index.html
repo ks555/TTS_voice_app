@@ -1,0 +1,64 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+<title>Title of the document</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type='text/javascript' src='jquery.soap.js'></script>
+<script type='text/javascript' src='cerecloud.js'></script>
+
+<style>
+.grid-item {
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.horizontal {
+  display: flex;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+.textarea {
+  height: 150px;
+  width: 50%;
+}
+.errormsg {
+  font-size: 15px;
+  color: red;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="grid-item"> 
+<textarea class="textarea" id="input_text">
+Please enter content to read aloud.
+</textarea> 
+</div>
+
+<div class="horizontal">
+<select id="voice">
+  <option value="None">Select a voice</option>
+  <option value="William">William - UK</option>
+  <option value="Lauren">Sarah - UK</option>
+  <option value="Lucia">Lucia - PT</option>
+  <option value="Laura">Laura - IT</option>
+</select>
+<button type="button" id="btn_play" >Play</button>  
+<button type="button" id="btn_stop">Stop</button> 
+</div>
+
+<div class="horizontal"> 
+<p class='errormsg' id='msg_error'></p>
+</div>
+
+<a id=output></a>
+<audio id="audio-player">Audio player not supported on this browser</audio>
+
+</body>
+
+</html> 
