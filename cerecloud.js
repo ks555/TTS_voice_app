@@ -46,6 +46,7 @@ $(document).ready(function(){
 			// $("#output").text("Click to listen");
 			audioPlayer.setAttribute('src',  xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 			audioPlayer.play();
+			window.open(xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 		}
 		},
 		error: function (SOAPResponse) {
