@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 	// Set up some variables
 	var cereurl = "https://cerevoice.com/soap/soap_1_1.php?";
-	var ceremethod = "speakSimple";
-	var accID = "5aec2e36c429d";
+	var ceremethod = "";
+	var accID = "";
 	var pword = "VkZmL42e5L";
 	var cerevoice =  $('#voice').val();
 	var txt = $('#input_text').val();
