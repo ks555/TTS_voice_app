@@ -36,7 +36,7 @@ $(document).ready(function(){
 		: '', 
 		metadata
 		: ''
-		},
+		}
 		success: function (soapResponse) {
 		// do stuff with soapResponse
 		// if you want to have the response as JSON use soapResponse.toJSON();
