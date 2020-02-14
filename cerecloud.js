@@ -45,7 +45,8 @@ $(document).ready(function(){
 			// $("#output").attr("href", xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 			// $("#output").text("Click to listen");
 			audioPlayer.setAttribute('src',  xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
-			audioPlayer.play();
+			// audio player not played as audio is played in new window
+			// audioPlayer.play();
 			window.open(xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 		}
 		},
