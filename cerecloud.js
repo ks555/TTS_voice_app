@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 	// Set up some variables
 	var cereurl = "https://cerevoice.com/soap/soap_1_1.php?";
-	var ceremethod = "speakSimple";
+	var ceremethod = "speakExtended";
 	var accID = "5aec2e36c429d";
 	var pword = "VkZmL42e5L";
 	var cerevoice =  $('#voice').val();
@@ -27,7 +27,15 @@ $(document).ready(function(){
 		voice
 		: cerevoice,
 		text
-		: txt
+		: txt,
+ 		audioFormat
+		: 'mp3',
+		sampleRate
+		: '',
+		audio3D
+		: '', 
+		metadata
+		: ''
 		},
 		success: function (soapResponse) {
 		// do stuff with soapResponse
@@ -45,7 +53,7 @@ $(document).ready(function(){
 			// $("#output").attr("href", xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 			// $("#output").text("Click to listen");
 			audioPlayer.setAttribute('src',  xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
-			audioPlayer.play();
+			//audioPlayer.play();
 			window.open(xmlDoc.getElementsByTagName("fileUrl")[0].textContent);
 		}
 		},
